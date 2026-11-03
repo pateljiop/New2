@@ -24,3 +24,25 @@
 .privacy-cancel{display:block;width:100%;border:1px solid #ffffff25;border-radius:30px;background:#ffffff0b;color:#f2ddec;padding:13px;margin-top:10px;min-height:46px}
 .privacy-panel>small{display:block;color:#a995b9;font-size:10px;margin-top:16px}
 .private-memory:focus-visible,.privacy-cancel:focus-visible,#privacyConfirm:focus-visible{outline:3px solid #f4b8d8;outline-offset:3px}
+
+
+/* Her recorded song — a dedicated keepsake section */
+.sound-toggle{text-decoration:none}
+.song-screen{background:radial-gradient(ellipse at 50% 38%,#704b7566,transparent 58%)}
+.song-art{height:180px;width:220px;position:relative;display:grid;place-items:center;margin:4px auto 8px}
+.vinyl-record{width:154px;height:154px;border-radius:50%;display:grid;place-items:center;background:repeating-radial-gradient(circle at center,#211a2b 0 3px,#382a42 4px 5px,#211a2b 6px 8px);box-shadow:0 12px 35px #08051588,0 0 0 7px #ffffff0b;animation:vinylFloat 5s ease-in-out infinite}
+.vinyl-center{width:53px;height:53px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#f5c5dc,#b98ab9);color:#713f70;font-size:27px;box-shadow:0 0 0 5px #211a2b}
+.song-note{position:absolute;right:15px;bottom:24px;color:#f8d5e8;font-size:35px;text-shadow:0 0 20px #f4b8d8}
+.song-spark{position:absolute;color:#ffe5a0;animation:twinkle 2s infinite}
+.spark-a{left:16px;top:28px;font-size:22px}.spark-b{right:12px;top:30px;font-size:17px}
+.song-date{font-size:10px;letter-spacing:3px;color:#e8b9d4;margin:0 0 10px}
+.song-player{width:min(100%,360px);padding:17px;border:1px solid #f2c6df40;border-radius:20px;background:linear-gradient(145deg,#ffffff13,#ffffff07);box-shadow:0 15px 40px #08051544;text-align:left}
+.song-player-title{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.song-player-title>span:first-child{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:#f4c2dc20;font-size:21px}
+.song-player-title>span:last-child{display:flex;flex-direction:column;gap:4px}
+.song-player-title b{font-family:"Playfair Display",serif;font-size:16px;font-weight:500;color:#ffe2ef}
+.song-player-title small{font-size:10px;color:#c8b5d4}
+.song-player audio{display:block;width:100%;height:42px;accent-color:#d89abe}
+.song-player>p{font-size:10px;line-height:1.6;color:#bfaecb;margin:12px 2px 0}
+.song-footnote{font-family:"Playfair Display",serif;font-style:italic;color:#e7c5dc;font-size:14px;margin-top:18px}
+@keyframes vinylFloat{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-7px) rotate(4deg)}}
