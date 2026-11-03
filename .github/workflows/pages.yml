@@ -33,7 +33,7 @@ jobs:
           const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
           const duplicates = [...new Set(ids.filter((id, i) => ids.indexOf(id) !== i))];
           const idSet = new Set(ids);
-          const missingIds = [...new Set([...js.matchAll(/\$\\("#([^"]+)"\\)/g)].map(m => m[1]).filter(id => !idSet.has(id)))];
+          const missingIds = [...new Set([...js.matchAll(/\$\("#([^"]+)"\)/g)].map(m => m[1]).filter(id => !idSet.has(id)))];
           const refs = [...html.matchAll(/\b(?:src|href)="([^"]+)"/g)].map(m => m[1])
             .filter(ref => ref.startsWith('./'));
           const missingFiles = refs.filter(ref => !fs.existsSync(path.resolve(ref)));
