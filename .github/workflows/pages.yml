@@ -30,11 +30,11 @@ jobs:
           const path = require('node:path');
           const html = fs.readFileSync('index.html', 'utf8');
           const js = fs.readFileSync('script.js', 'utf8');
-          const ids = [...html.matchAll(/\\bid="([^"]+)"/g)].map(m => m[1]);
+          const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
           const duplicates = [...new Set(ids.filter((id, i) => ids.indexOf(id) !== i))];
           const idSet = new Set(ids);
-          const missingIds = [...new Set([...js.matchAll(/\\$\\("#([^"]+)"\\)/g)].map(m => m[1]).filter(id => !idSet.has(id)))];
-          const refs = [...html.matchAll(/\\b(?:src|href)="([^"]+)"/g)].map(m => m[1])
+          const missingIds = [...new Set([...js.matchAll(/\$\\("#([^"]+)"\\)/g)].map(m => m[1]).filter(id => !idSet.has(id)))];
+          const refs = [...html.matchAll(/\b(?:src|href)="([^"]+)"/g)].map(m => m[1])
             .filter(ref => ref.startsWith('./'));
           const missingFiles = refs.filter(ref => !fs.existsSync(path.resolve(ref)));
           if (duplicates.length || missingIds.length || missingFiles.length) {
