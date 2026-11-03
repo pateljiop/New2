@@ -57,3 +57,9 @@
     scroll-behavior: auto !important;
   }
 }
+
+
+/* Personal nickname touch for her future-doctor dream */
+.doctor-tag{display:inline-block;margin:0 auto 18px;padding:8px 13px;border:1px solid #f2c4df55;border-radius:30px;background:#f5c9e914;color:#f7d7e9;font-family:"Playfair Display",serif;font-size:13px;line-height:1.5}
+.doctor-dedication{margin:0 0 8px;padding:9px 14px;border:1px solid #f2c4df55;border-radius:30px;background:#f5c9e914;color:#f3c6df;font-size:10px;font-weight:700;letter-spacing:2px}
+.doctor-dedication span{font-size:15px;vertical-align:middle;margin-left:5px}
