@@ -20,14 +20,18 @@ $$(".hidden-star").forEach(star => star.addEventListener("click", () => {
 }));
 
 const wishes = [
-  "May you never feel too grown-up to dance in your room for no reason. 💃",
-  "I hope you find little reasons to smile even on the most ordinary days. 🌷",
-  "May your inner child always feel safe, free and full of wonder. 🧸",
-  "You deserve soft mornings, loud laughter and dreams that come true. ☀️",
-  "Never feel silly for being playful. That is a beautiful part of you. 🦋",
-  "May this new year of life surprise you in the loveliest ways. ✨",
-  "I hope you get more reasons to say: today was a really good day. 💗",
-  "Keep dreaming big, laughing freely and being wonderfully you. 🌙"
+  "May every exam bring you one step closer to your white coat. 🩺",
+  "May you always find time to laugh, even on the busiest days. 💗",
+  "I hope your hard work meets the opportunities you deserve. ✨",
+  "May your mind stay curious and your heart stay kind. 🌷",
+  "You deserve peaceful sleep after long study days. 🌙",
+  "May you always believe in yourself, especially when things feel difficult. 🦋",
+  "I hope this year brings good health, good people and beautiful surprises. ☀️",
+  "May you never forget that you are more than your marks or achievements. ♡",
+  "Keep your inner child alive — dance, laugh and be a little silly. 🧸",
+  "May the dream you carry today become the life you live tomorrow. 📚",
+  "I hope you feel proud of every small step you take. 🌟",
+  "And most of all, may you always have reasons to smile. Happy Birthday, Doctor Sahiba! 🎂"
 ];
 let lastWish = -1;
 $("#wishBtn").addEventListener("click", () => {
