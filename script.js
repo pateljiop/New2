@@ -89,7 +89,23 @@ function closeLightbox() {
 }
 $("#lightboxClose").addEventListener("click", closeLightbox);
 lightbox.addEventListener("click", event => { if (event.target === lightbox) closeLightbox(); });
-document.addEventListener("keydown", event => { if (event.key === "Escape" && !lightbox.classList.contains("hidden")) closeLightbox(); });
+function keepFocusInside(dialog, event) {
+  if (event.key !== "Tab") return;
+  const items = [...dialog.querySelectorAll('button:not([disabled]), a[href], audio[controls], [tabindex]:not([tabindex="-1"])')].filter(el => el.getClientRects().length);
+  if (!items.length) { event.preventDefault(); return; }
+  const first = items[0], last = items[items.length - 1];
+  if (event.shiftKey && (document.activeElement === first || !dialog.contains(document.activeElement))) {
+    event.preventDefault(); last.focus();
+  } else if (!event.shiftKey && (document.activeElement === last || !dialog.contains(document.activeElement))) {
+    event.preventDefault(); first.focus();
+  }
+}
+document.addEventListener("keydown", event => {
+  if (!lightbox.classList.contains("hidden")) {
+    if (event.key === "Escape") closeLightbox();
+    else keepFocusInside(lightbox, event);
+  }
+});
 
 /* Private photos: blur at rest; ask for privacy before opening */
 const privacyGate = $("#privacyGate");
@@ -127,5 +143,8 @@ privacyConfirm.addEventListener("click", () => {
   $("#lightboxClose").focus();
 });
 document.addEventListener("keydown", event => {
-  if (event.key === "Escape" && !privacyGate.classList.contains("hidden")) closePrivacyGate();
+  if (!privacyGate.classList.contains("hidden")) {
+    if (event.key === "Escape") closePrivacyGate();
+    else keepFocusInside(privacyGate, event);
+  }
 });
