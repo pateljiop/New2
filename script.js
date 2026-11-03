@@ -57,12 +57,6 @@ function celebrate() {
 $("#wishCakeBtn").addEventListener("click", celebrate);
 $$(".candle").forEach(c => c.addEventListener("click", () => c.classList.add("out")));
 
-const soundButton = $("#soundToggle");
-soundButton.addEventListener("click", () => {
-  soundButton.innerHTML = "♫ <span>Sound is off</span>";
-  soundButton.setAttribute("aria-label","No background audio is currently attached");
-});
-
 const sections = $$("main section[id]");
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(entries => {
