@@ -82,3 +82,38 @@ function closeLightbox() {
 $("#lightboxClose").addEventListener("click", closeLightbox);
 lightbox.addEventListener("click", event => { if (event.target === lightbox) closeLightbox(); });
 document.addEventListener("keydown", event => { if (event.key === "Escape" && !lightbox.classList.contains("hidden")) closeLightbox(); });
+
+/* Private photos: blur at rest; ask for privacy before opening */
+const privacyGate = $("#privacyGate");
+const privacyConfirm = $("#privacyConfirm");
+const privacyCancel = $("#privacyCancel");
+let pendingPrivatePhoto = null;
+$$("[data-private-photo]").forEach(card => card.addEventListener("click", () => {
+  pendingPrivatePhoto = card;
+  privacyGate.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+  privacyCancel.focus();
+}));
+function closePrivacyGate() {
+  privacyGate.classList.add("hidden");
+  pendingPrivatePhoto = null;
+  document.body.style.overflow = "";
+}
+privacyCancel.addEventListener("click", closePrivacyGate);
+privacyGate.addEventListener("click", event => {
+  if (event.target === privacyGate) closePrivacyGate();
+});
+privacyConfirm.addEventListener("click", () => {
+  if (!pendingPrivatePhoto) return;
+  const photoPath = pendingPrivatePhoto.dataset.photo;
+  const caption = pendingPrivatePhoto.dataset.caption || "A personal memory";
+  closePrivacyGate();
+  lightboxImage.src = photoPath;
+  lightboxImage.alt = caption;
+  lightbox.querySelector("p").textContent = caption + " ♡";
+  lightbox.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+});
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && !privacyGate.classList.contains("hidden")) closePrivacyGate();
+});
