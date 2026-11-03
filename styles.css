@@ -63,3 +63,31 @@
 .doctor-tag{display:inline-block;margin:0 auto 18px;padding:8px 13px;border:1px solid #f2c4df55;border-radius:30px;background:#f5c9e914;color:#f7d7e9;font-family:"Playfair Display",serif;font-size:13px;line-height:1.5}
 .doctor-dedication{margin:0 0 8px;padding:9px 14px;border:1px solid #f2c4df55;border-radius:30px;background:#f5c9e914;color:#f3c6df;font-size:10px;font-weight:700;letter-spacing:2px}
 .doctor-dedication span{font-size:15px;vertical-align:middle;margin-left:5px}
+
+
+/* A playful keepsake prescription for Doctor Sahiba */
+.prescription-screen{background:radial-gradient(ellipse at 50% 42%,#7b4d7044,transparent 60%)}
+.rx-card{width:min(100%,370px);padding:21px 19px 18px;border:1px solid #f2c8df88;border-radius:9px;background:linear-gradient(145deg,#fff8f0,#f8e8ee 58%,#f3e5f4);color:#553d59;box-shadow:0 20px 55px #09051566,0 0 0 5px #fff1f20b;text-align:left;position:relative;transform:rotate(-.6deg)}
+.rx-topline{display:flex;align-items:center;gap:10px}
+.rx-symbol{font-family:Georgia,serif;font-size:43px;line-height:1;color:#9a648d}
+.rx-clinic{font-size:10px;font-weight:700;letter-spacing:1.5px;line-height:1.5;color:#805d83}
+.rx-clinic small{font-size:9px;font-weight:500;letter-spacing:.3px;color:#9c829e}
+.rx-heart{margin-left:auto;font-size:27px;color:#d68eb2}
+.rx-rule{height:1px;background:#c99fba;margin:14px 0 17px}
+.rx-for{font-size:8px;letter-spacing:2px;color:#9a7798;margin:0 0 5px}
+.rx-card h2{font-family:"Playfair Display",serif;font-size:29px;line-height:1.15;color:#684a70;margin:0}
+.rx-card h2 span{font-size:21px}
+.rx-note{font-family:"Playfair Display",serif;font-style:italic;font-size:12px;color:#967c98;margin:7px 0 17px}
+.rx-prescription{display:flex;flex-direction:column;gap:0;border-top:1px dashed #caa9c2}
+.rx-prescription>div{display:flex;align-items:center;gap:11px;padding:12px 2px;border-bottom:1px dashed #caa9c2}
+.rx-prescription>div>b{font-family:"Playfair Display",serif;font-size:16px;color:#c080a7}
+.rx-prescription>div>span{display:flex;flex:1;flex-direction:column;gap:3px}
+.rx-prescription strong{font-family:"Playfair Display",serif;font-size:15px;font-weight:600;color:#62466b}
+.rx-prescription small{font-size:10px;color:#917b93}
+.rx-prescription i{font-style:normal;font-size:19px}
+.rx-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:15px}
+.rx-bottom>span:first-child{font-size:8px;letter-spacing:1.3px;font-weight:700;color:#a06f91}
+.rx-stamp{width:58px;height:58px;display:grid;place-content:center;border:1.5px solid #d48eac;border-radius:50%;text-align:center;font-size:7px;font-weight:800;letter-spacing:1px;line-height:1.5;color:#bd7198;transform:rotate(-12deg)}
+.rx-sign{margin:10px 0 0;font-family:"Playfair Display",serif;font-size:11px;color:#987b98}
+.rx-sign strong{display:block;font-size:17px;font-style:italic;color:#76547a;font-weight:600}
+.rx-closing{max-width:330px;margin:22px auto 0;font-family:"Playfair Display",serif;font-style:italic;font-size:17px;line-height:1.65;color:#f5d2e5}
