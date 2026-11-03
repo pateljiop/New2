@@ -69,8 +69,11 @@ if ("IntersectionObserver" in window) {
 
 const lightbox = $("#photoLightbox");
 const lightboxImage = $("#lightboxImage");
-$$("[data-photo]").forEach(card => card.addEventListener("click", () => {
+$("[data-photo]").forEach(card => card.addEventListener("click", () => {
   lightboxImage.src = card.dataset.photo;
+  const caption = card.dataset.caption || card.querySelector("span")?.textContent?.trim() || card.querySelector("img")?.alt || "Little memories, just for you";
+  lightboxImage.alt = caption;
+  lightbox.querySelector("p").textContent = caption + " ♡";
   lightbox.classList.remove("hidden");
   document.body.style.overflow = "hidden";
 }));
