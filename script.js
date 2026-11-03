@@ -70,7 +70,7 @@ if ("IntersectionObserver" in window) {
 const lightbox = $("#photoLightbox");
 const lightboxImage = $("#lightboxImage");
 let lightboxOpener = null;
-$("[data-photo]:not([data-private-photo])").forEach(card => card.addEventListener("click", () => {
+$$("[data-photo]:not([data-private-photo])").forEach(card => card.addEventListener("click", () => {
   lightboxOpener = card;
   lightboxImage.src = card.dataset.photo;
   const caption = card.dataset.caption || card.querySelector("span")?.textContent?.trim() || card.querySelector("img")?.alt || "Little memories, just for you";
@@ -96,7 +96,7 @@ const privacyGate = $("#privacyGate");
 const privacyConfirm = $("#privacyConfirm");
 const privacyCancel = $("#privacyCancel");
 let pendingPrivatePhoto = null;
-$("[data-private-photo]").forEach(card => card.addEventListener("click", () => {
+$$("[data-private-photo]").forEach(card => card.addEventListener("click", () => {
   pendingPrivatePhoto = card;
   privacyGate.classList.remove("hidden");
   document.body.style.overflow = "hidden";
