@@ -66,3 +66,19 @@ if ("IntersectionObserver" in window) {
   }, {threshold:.12});
   sections.forEach(section => observer.observe(section));
 }
+
+const lightbox = $("#photoLightbox");
+const lightboxImage = $("#lightboxImage");
+$$("[data-photo]").forEach(card => card.addEventListener("click", () => {
+  lightboxImage.src = card.dataset.photo;
+  lightbox.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+}));
+function closeLightbox() {
+  lightbox.classList.add("hidden");
+  lightboxImage.removeAttribute("src");
+  document.body.style.overflow = "";
+}
+$("#lightboxClose").addEventListener("click", closeLightbox);
+lightbox.addEventListener("click", event => { if (event.target === lightbox) closeLightbox(); });
+document.addEventListener("keydown", event => { if (event.key === "Escape" && !lightbox.classList.contains("hidden")) closeLightbox(); });
