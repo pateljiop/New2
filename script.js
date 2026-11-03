@@ -69,18 +69,23 @@ if ("IntersectionObserver" in window) {
 
 const lightbox = $("#photoLightbox");
 const lightboxImage = $("#lightboxImage");
-$$("[data-photo]:not([data-private-photo])").forEach(card => card.addEventListener("click", () => {
+let lightboxOpener = null;
+$("[data-photo]:not([data-private-photo])").forEach(card => card.addEventListener("click", () => {
+  lightboxOpener = card;
   lightboxImage.src = card.dataset.photo;
   const caption = card.dataset.caption || card.querySelector("span")?.textContent?.trim() || card.querySelector("img")?.alt || "Little memories, just for you";
   lightboxImage.alt = caption;
   lightbox.querySelector("p").textContent = caption + " ♡";
   lightbox.classList.remove("hidden");
   document.body.style.overflow = "hidden";
+  $("#lightboxClose").focus();
 }));
 function closeLightbox() {
   lightbox.classList.add("hidden");
   lightboxImage.removeAttribute("src");
   document.body.style.overflow = "";
+  lightboxOpener?.focus();
+  lightboxOpener = null;
 }
 $("#lightboxClose").addEventListener("click", closeLightbox);
 lightbox.addEventListener("click", event => { if (event.target === lightbox) closeLightbox(); });
@@ -91,7 +96,7 @@ const privacyGate = $("#privacyGate");
 const privacyConfirm = $("#privacyConfirm");
 const privacyCancel = $("#privacyCancel");
 let pendingPrivatePhoto = null;
-$$("[data-private-photo]").forEach(card => card.addEventListener("click", () => {
+$("[data-private-photo]").forEach(card => card.addEventListener("click", () => {
   pendingPrivatePhoto = card;
   privacyGate.classList.remove("hidden");
   document.body.style.overflow = "hidden";
@@ -99,8 +104,10 @@ $$("[data-private-photo]").forEach(card => card.addEventListener("click", () => 
 }));
 function closePrivacyGate() {
   privacyGate.classList.add("hidden");
+  const opener = pendingPrivatePhoto;
   pendingPrivatePhoto = null;
   document.body.style.overflow = "";
+  opener?.focus();
 }
 privacyCancel.addEventListener("click", closePrivacyGate);
 privacyGate.addEventListener("click", event => {
@@ -110,12 +117,14 @@ privacyConfirm.addEventListener("click", () => {
   if (!pendingPrivatePhoto) return;
   const photoPath = pendingPrivatePhoto.dataset.photo;
   const caption = pendingPrivatePhoto.dataset.caption || "A personal memory";
+  lightboxOpener = pendingPrivatePhoto;
   closePrivacyGate();
   lightboxImage.src = photoPath;
   lightboxImage.alt = caption;
   lightbox.querySelector("p").textContent = caption + " ♡";
   lightbox.classList.remove("hidden");
   document.body.style.overflow = "hidden";
+  $("#lightboxClose").focus();
 });
 document.addEventListener("keydown", event => {
   if (event.key === "Escape" && !privacyGate.classList.contains("hidden")) closePrivacyGate();
