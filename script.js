@@ -69,7 +69,7 @@ if ("IntersectionObserver" in window) {
 
 const lightbox = $("#photoLightbox");
 const lightboxImage = $("#lightboxImage");
-$("[data-photo]").forEach(card => card.addEventListener("click", () => {
+$("[data-photo]:not([data-private-photo])").forEach(card => card.addEventListener("click", () => {
   lightboxImage.src = card.dataset.photo;
   const caption = card.dataset.caption || card.querySelector("span")?.textContent?.trim() || card.querySelector("img")?.alt || "Little memories, just for you";
   lightboxImage.alt = caption;
