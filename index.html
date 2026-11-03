@@ -74,8 +74,21 @@
 
     <section class="screen memories-screen" id="memories">
       <div class="section-kicker">04 · OUR LITTLE STORY</div>
-      <h2>Some connections<br><em>are unexpected magic.</em></h2>
-      <p class="section-intro">From a hello on Telegram to conversations, pauses, laughter and memories. Our story has had its own little seasons.</p>
+      <h2>Some moments<br><em>are just for us.</em></h2>
+      <p class="section-intro">A few personal memories are tucked away here. They stay softly blurred until you choose to open them.</p>
+      <div class="private-memory-list">
+        <button class="private-memory" type="button" data-private-photo data-photo="./assets/photos/our-memories/02-our-recent-video-call.jpg" data-caption="Our recent video call">
+          <span class="private-thumb"><img src="./assets/photos/our-memories/02-our-recent-video-call.jpg" alt="" loading="lazy"><i>♡</i></span>
+          <span class="private-copy"><small>PERSONAL MEMORY · 01</small><b>Our recent video call</b><em>Tap only when you have privacy</em></span>
+          <span class="private-lock">⌑</span>
+        </button>
+        <button class="private-memory" type="button" data-private-photo data-photo="./assets/photos/our-memories/01-little-study-moment.jpg" data-caption="A little everyday moment">
+          <span class="private-thumb"><img src="./assets/photos/our-memories/01-little-study-moment.jpg" alt="" loading="lazy"><i>♡</i></span>
+          <span class="private-copy"><small>PERSONAL MEMORY · 02</small><b>A little everyday moment</b><em>Tap only when you have privacy</em></span>
+          <span class="private-lock">⌑</span>
+        </button>
+      </div>
+      <p class="privacy-footnote">These are personal moments. Please open them only when you're comfortable and somewhere private. ♡</p>
       <div class="timeline">
         <article class="memory-card"><span class="memory-dot">✉</span><div><small>CHAPTER 01</small><h3>A little hello</h3><p>Who knew one online hello could become a story worth remembering?</p></div></article>
         <article class="memory-card"><span class="memory-dot">☁</span><div><small>CHAPTER 02</small><h3>Conversations & quiet days</h3><p>Some days brought endless words. Some brought silence. Every chapter taught us something.</p></div></article>
@@ -151,6 +164,17 @@
   <div class="photo-lightbox hidden" id="photoLightbox" role="dialog" aria-modal="true" aria-label="Photo viewer"><button class="lightbox-close" id="lightboxClose" aria-label="Close photo">×</button><img id="lightboxImage" alt="Selected memory"><p>Little memories, just for you ♡</p></div>
     </section>
   </main>
+  <div class="privacy-gate hidden" id="privacyGate" role="dialog" aria-modal="true" aria-labelledby="privacyTitle" aria-describedby="privacyDescription">
+    <div class="privacy-panel">
+      <div class="privacy-icon">♡</div>
+      <p class="section-kicker">A PRIVATE LITTLE MEMORY</p>
+      <h2 id="privacyTitle">Are you somewhere<br><em>comfortable and alone?</em></h2>
+      <p id="privacyDescription">This photo is personal. Please continue only if you have privacy and genuinely want to view it. You can always close this.</p>
+      <button class="primary-btn" id="privacyConfirm" type="button">I'm alone · Open memory</button>
+      <button class="privacy-cancel" id="privacyCancel" type="button">Not now, keep it hidden</button>
+      <small>There is no pressure to open it. ♡</small>
+    </div>
+  </div>
   <nav class="bottom-nav" aria-label="Quick navigation"><a href="#home" aria-label="Home">⌂</a><a href="#play" aria-label="Play">✧</a><a href="#gallery" aria-label="Photos">♡</a><a href="#our-memories" aria-label="Our memories">∞</a><a href="#cake" aria-label="Birthday cake">🎂</a></nav>
   <script src="./script.js"></script>
 </body>
