@@ -1,23 +1,29 @@
 # Ritika's Little Dreamland 💗
 
-A mobile-first interactive birthday experience made for Babu.
+A mobile-first, static birthday experience created for Ritika (Babu), designed to work smoothly on a phone without a laptop or app install.
 
-## Features
-- Secret envelope reveal
-- Animated pastel dreamland
-- Five-star childhood mini game
-- A gentle relationship timeline
-- Photo gallery placeholders
-- Random happiness jar
-- Interactive birthday cake and confetti
-- Responsive layout and reduced-motion support
+## What's included
+- A welcome screen and interactive envelope reveal
+- A playful dreamland section with five hidden stars
+- A gentle story timeline and shared-memory cards
+- A 12-photo gallery with captions and a full-screen viewer
+- Two blurred personal-memory cards with an explicit "open memory" confirmation
+- A dedicated audio keepsake: a song Ritika sang on 12 April 2024
+- A happiness jar with rotating wishes
+- An interactive birthday cake, candles and confetti
+- Keyboard-friendly photo dialogs and reduced-motion support
+- Responsive layout for mobile screens
 
-## Add Ritika's photos
-When the photos are provided, add optimized images under `assets/` and replace the three photo placeholders in `index.html` with image elements. Keep images compressed for mobile loading.
+## Run locally
+Open `index.html` in a browser. No build step, package install or backend is needed.
 
 ## GitHub Pages
-The included GitHub Actions workflow deploys the static site from the `main` branch. In repository Settings → Pages, select **GitHub Actions** as the build and deployment source.
+The `.github/workflows/pages.yml` workflow validates the static files and deploys the site from `main`.
 
 Expected URL: https://pateljiop.github.io/New2/
 
-No build step or backend is required.
+## Personal-photo privacy note
+The private-memory cards are blurred in the interface and ask for confirmation before showing a photo. This is a considerate on-screen prompt, **not access control**: files in a public repository and their direct image URLs can still be accessed by anyone. Do not put genuinely confidential images in a public repository.
+
+## Media
+Keep images compressed and reasonably sized for mobile data. Audio playback is user-initiated; it does not autoplay.
