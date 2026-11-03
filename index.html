@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#211a3c" />
+  <meta name="description" content="A little magical birthday world made with love for Babu." />
+  <title>Ritika's Little Dreamland ✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <header class="topbar"><a class="brand" href="#home">✦ <span>for Babu</span></a><button class="sound-toggle" id="soundToggle" aria-label="Toggle sound" title="Sound is optional">♫ <span>Sound off</span></button></header>
+
+  <main>
+    <section class="screen hero" id="home">
+      <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="sparkle">✧</span> A tiny universe, made just for you <span class="sparkle">✧</span></p>
+        <div class="moon-art" aria-hidden="true"><div class="moon">☾</div><span class="star s1">✦</span><span class="star s2">✧</span><span class="star s3">✦</span><span class="star s4">✧</span><span class="cloud cloud-a"></span><span class="cloud cloud-b"></span></div>
+        <h1>Happy Birthday,<br><em>Ritika</em><span class="name-star">✦</span></h1>
+        <p class="hero-sub">Hey Babu, today this little world is all yours.</p>
+        <button class="primary-btn" id="beginBtn">Enter your dreamland <span>→</span></button>
+        <p class="tiny-note">Made with a little love, a lot of wishes & stardust.</p>
+      </div>
+      <div class="scroll-cue">SCROLL TO EXPLORE <span>↓</span></div>
+    </section>
+
+    <section class="screen letter-screen" id="letter">
+      <div class="section-kicker">01 · A LITTLE SECRET</div>
+      <h2>Someone left<br><em>a letter for you.</em></h2>
+      <p class="section-intro">No rush, Babu. Tap the envelope when you're ready.</p>
+      <button class="envelope-wrap" id="envelope" aria-label="Open your birthday letter">
+        <span class="envelope-glow"></span><span class="envelope-back"></span><span class="letter-paper"><span>For my Babu</span><b>✦</b></span><span class="envelope-front"></span><span class="envelope-flap"></span><span class="seal">♥</span>
+      </button>
+      <p class="tap-hint" id="envelopeHint">TAP TO OPEN ✧</p>
+      <p class="reveal-note hidden" id="envelopeNote">Aaj ka din sirf tumhara hai. Let the little magic begin. 💗</p>
+    </section>
+
+    <section class="screen wonder-screen" id="wonder">
+      <div class="section-kicker">02 · YOUR LITTLE WORLD</div>
+      <div class="wonder-sky">
+        <div class="floating-butterfly butterfly-one">🦋</div><div class="floating-butterfly butterfly-two">🦋</div>
+        <div class="tiny-planet">✦</div><div class="cloud-shape c1"></div><div class="cloud-shape c2"></div>
+        <div class="castle"><div class="castle-tower left"></div><div class="castle-main"><div class="castle-door"></div><div class="castle-window"></div></div><div class="castle-tower right"></div><div class="castle-flag">♡</div></div>
+        <div class="hill hill-back"></div><div class="hill hill-front"></div>
+      </div>
+      <h2>Welcome to<br><em>your dreamland, Babu.</em></h2>
+      <p class="section-intro">A place where clouds feel softer, flowers glow brighter, and being a little childish is always allowed.</p>
+      <a class="text-link" href="#play">Come, let's play <span>↓</span></a>
+    </section>
+
+    <section class="screen play-screen" id="play">
+      <div class="section-kicker">03 · BACK TO BACHPANA</div>
+      <div class="toy-icon">🧸</div>
+      <h2>Let's find your<br><em>little bits of magic.</em></h2>
+      <p class="section-intro">Five tiny stars are hiding around this page. Find them all and unlock a little message.</p>
+      <div class="star-game" id="starGame" aria-label="Find five stars">
+        <button class="hidden-star star-a" data-star="1" aria-label="Find star one">✦</button>
+        <button class="hidden-star star-b" data-star="2" aria-label="Find star two">✧</button>
+        <button class="hidden-star star-c" data-star="3" aria-label="Find star three">✦</button>
+        <button class="hidden-star star-d" data-star="4" aria-label="Find star four">✧</button>
+        <button class="hidden-star star-e" data-star="5" aria-label="Find star five">✦</button>
+        <div class="game-cloud">☁️</div><div class="game-teddy">🧸</div><div class="game-flower">🌷</div>
+        <p class="game-label">A LITTLE PLAYGROUND</p>
+      </div>
+      <div class="progress-row"><span id="starCount">0 of 5 stars found</span><div class="progress-track"><span id="starProgress"></span></div></div>
+      <div class="star-reward hidden" id="starReward"><span>🌟</span><p><b>You found every little star!</b><br>May you always keep your playful heart, your silly giggles and your beautiful dreams.</p></div>
+      <p class="small-note">Psst… tap the glowing stars ✨</p>
+    </section>
+
+    <section class="screen memories-screen" id="memories">
+      <div class="section-kicker">04 · OUR LITTLE STORY</div>
+      <h2>Some connections<br><em>are unexpected magic.</em></h2>
+      <p class="section-intro">From a hello on Telegram to conversations, pauses, laughter and memories. Our story has had its own little seasons.</p>
+      <div class="timeline">
+        <article class="memory-card"><span class="memory-dot">✉</span><div><small>CHAPTER 01</small><h3>A little hello</h3><p>Who knew one online hello could become a story worth remembering?</p></div></article>
+        <article class="memory-card"><span class="memory-dot">☁</span><div><small>CHAPTER 02</small><h3>Conversations & quiet days</h3><p>Some days brought endless words. Some brought silence. Every chapter taught us something.</p></div></article>
+        <article class="memory-card"><span class="memory-dot">♡</span><div><small>CHAPTER 03</small><h3>Still wishing you well</h3><p>Whatever tomorrow looks like, today I hope life is extra gentle and beautiful to you.</p></div></article>
+      </div>
+      <p class="memory-footnote">No perfect story needed. Just honest memories, held gently.</p>
+    </section>
+
+    <section class="screen gallery-screen" id="gallery">
+      <div class="section-kicker">05 · A LITTLE PHOTO CORNER</div>
+      <h2>Beautiful moments<br><em>of you.</em></h2>
+      <p class="section-intro">A tiny gallery, waiting for your favourite pictures.</p>
+      <div class="photo-grid">
+        <div class="photo-placeholder tall"><span>✿</span><b>Your favourite smile</b><small>PHOTO 01</small></div>
+        <div class="photo-placeholder"><span>♡</span><b>A little sunshine</b><small>PHOTO 02</small></div>
+        <div class="photo-placeholder"><span>✧</span><b>Simply you</b><small>PHOTO 03</small></div>
+      </div>
+      <p class="small-note">These frames will hold your real photos — no filters, no made-up moments, just you.</p>
+    </section>
+
+    <section class="screen wishes-screen" id="wishes">
+      <div class="section-kicker">06 · LITTLE HAPPINESS JAR</div>
+      <div class="jar-art"><div class="jar-lid"></div><div class="jar-body"><span>✦</span><span>♡</span><span>✧</span><span>✦</span><span>✧</span></div><div class="jar-label">little wishes<br>for Babu</div></div>
+      <h2>A little reminder<br><em>whenever you need one.</em></h2>
+      <p class="section-intro">Tap the jar and pick a tiny wish from me to you.</p>
+      <button class="secondary-btn" id="wishBtn">Pick a little wish ✨</button>
+      <div class="wish-card hidden" id="wishCard" aria-live="polite">You deserve days that feel light, safe, silly and full of sunshine. 💗</div>
+    </section>
+
+    <section class="screen cake-screen" id="cake">
+      <div class="section-kicker">07 · MAKE A WISH</div>
+      <h2>It's your special day,<br><em>birthday girl!</em></h2>
+      <p class="section-intro">Take a breath, close your eyes for a second, and make a wish.</p>
+      <div class="cake-scene">
+        <div class="cake-stars">✦　✧　✦</div>
+        <div class="candles"><button class="candle" aria-label="Blow out candle"><i></i></button><button class="candle" aria-label="Blow out candle"><i></i></button><button class="candle" aria-label="Blow out candle"><i></i></button></div>
+        <div class="cake-top"></div><div class="cake-body"><span>Happy Birthday</span><b>Ritika</b></div><div class="cake-plate"></div>
+      </div>
+      <button class="primary-btn" id="wishCakeBtn">I made a wish <span>♡</span></button>
+      <p class="cake-message hidden" id="cakeMessage">May this year bring you tiny adventures, big smiles and so many reasons to feel happy. 🎂</p>
+      <div class="confetti-layer" id="confettiLayer"></div>
+    </section>
+
+    <section class="screen final-screen" id="final">
+      <div class="final-stars">✦　✧　✦　✧　✦</div>
+      <div class="final-heart">♡</div>
+      <p class="eyebrow">ONE LAST THING, BABU</p>
+      <h2>Keep that little<br><em>spark alive.</em></h2>
+      <p class="final-letter">I may be miles away, and we may not have met yet, but I wanted to make something that could bring a smile to your face today. I hope you get to laugh loudly, be silly without a reason, chase every little dream and feel loved by life.</p>
+      <p class="final-wish">Happy Birthday, Ritika. Always keep a little room for magic. 💗</p>
+      <div class="signature">With warmth, <span>someone who wishes you well.</span></div>
+      <a class="back-top" href="#home">↟ &nbsp; Visit your dreamland again</a>
+      <div class="footer-note">Made for Babu · 04.11.2026</div>
+    </section>
+  </main>
+  <nav class="bottom-nav" aria-label="Quick navigation"><a href="#home" aria-label="Home">⌂</a><a href="#play" aria-label="Play">✧</a><a href="#gallery" aria-label="Photos">♡</a><a href="#cake" aria-label="Birthday cake">🎂</a></nav>
+  <script src="./script.js"></script>
+</body>
+</html>
