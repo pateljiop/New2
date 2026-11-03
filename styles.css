@@ -91,3 +91,16 @@
 .rx-sign{margin:10px 0 0;font-family:"Playfair Display",serif;font-size:11px;color:#987b98}
 .rx-sign strong{display:block;font-size:17px;font-style:italic;color:#76547a;font-weight:600}
 .rx-closing{max-width:330px;margin:22px auto 0;font-family:"Playfair Display",serif;font-style:italic;font-size:17px;line-height:1.65;color:#f5d2e5}
+
+
+/* Future Doctor Sahiba dream keepsake */
+.doctor-dream-screen{background:radial-gradient(ellipse at 50% 40%,#6c547b66,transparent 58%)}
+.doctor-scene{width:230px;height:190px;position:relative;display:grid;place-items:center;margin:0 auto 7px}
+.medical-orbit{position:absolute;border:1px solid #e8c5e955;border-radius:50%;transform:rotate(-18deg)}
+.orbit-a{width:205px;height:94px}.orbit-b{width:165px;height:155px;transform:rotate(58deg);border-color:#c9b9f055}
+.doctor-emoji{width:112px;height:112px;display:grid;place-items:center;border-radius:50%;background:radial-gradient(circle,#fff1f344,#d8b9f022 65%,transparent 67%);font-size:65px;filter:drop-shadow(0 10px 18px #08051566);animation:float 4s ease-in-out infinite}
+.med-float{position:absolute;display:grid;place-items:center;width:43px;height:43px;border:1px solid #ffffff2b;border-radius:14px;background:#ffffff12;backdrop-filter:blur(8px);box-shadow:0 8px 20px #08051533}
+.med-book{left:15px;bottom:27px;font-size:22px;transform:rotate(-9deg)}.med-spark{right:23px;top:26px;color:#ffe5a0;font-size:22px}.med-heart{right:12px;bottom:28px;color:#f4b8d8;font-size:25px}
+.dream-label{font-size:9px;letter-spacing:2.5px;color:#eac2dc;margin:0 0 10px}
+.doctor-dream-screen h2{margin-top:0}
+.dream-footer{margin-top:18px;padding:12px 18px;border:1px solid #f2c4df44;border-radius:30px;background:#f5c9e912;color:#f4d2e4;font-family:"Playfair Display",serif;font-style:italic;font-size:14px}
