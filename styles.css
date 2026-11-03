@@ -46,3 +46,14 @@
 .song-player>p{font-size:10px;line-height:1.6;color:#bfaecb;margin:12px 2px 0}
 .song-footnote{font-family:"Playfair Display",serif;font-style:italic;color:#e7c5dc;font-size:14px;margin-top:18px}
 @keyframes vinylFloat{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-7px) rotate(4deg)}}
+
+/* Respect visitors who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
